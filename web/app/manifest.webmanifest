@@ -1,0 +1,26 @@
+{
+  "id": "/app/",
+  "name": "PintarAI — Teman Belajar",
+  "short_name": "PintarAI",
+  "description": "PintarAI Preview: latihan SD–SMA dan Explore Mode. Semua materi demo belum terverifikasi.",
+  "start_url": "/app/",
+  "scope": "/app/",
+  "display": "standalone",
+  "background_color": "#fafbff",
+  "theme_color": "#e9efff",
+  "lang": "id",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

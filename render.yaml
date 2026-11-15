@@ -1,0 +1,21 @@
+# PintarAI v2.1 — Render Blueprint untuk situs PREVIEW (bukan rilis akademik produksi)
+services:
+  - type: web
+    name: pintarai-preview
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/v1/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: PINTARAI_SITE_MODE
+        value: preview
+      - key: PINTARAI_DEMO_PREVIEW
+        value: '0'
+      - key: PYTHONUNBUFFERED
+        value: '1'
+      # Wajib saat membuat Blueprint: pilih password unik untuk reviewer preview.
+      # Render meminta nilainya, dan tidak menyimpannya di Git.
+      - key: PINTARAI_PREVIEW_PASSWORD
+        sync: false
